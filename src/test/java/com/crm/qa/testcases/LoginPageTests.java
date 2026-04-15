@@ -1,5 +1,6 @@
 package com.crm.qa.testcases;
 
+import com.crm.qa.Analyzer.RetryAnalyzer;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
@@ -28,10 +29,11 @@ public class LoginPageTests extends TestBase {
         loginPage = new LoginPage();
     }
 
+//    @Test(priority = 1,retryAnalyzer = RetryAnalyzer.class)
     @Test(priority = 1)
     public void loginPageTitleTest(){
         String title = loginPage.validateLoginPageTitle();
-        Assert.assertEquals(title,"#1 Free CRM Business Software - Free Forever");
+        Assert.assertEquals(title,"#2 Free CRM Business Software - Free Forever");
     }
 
     @Test(priority = 2)

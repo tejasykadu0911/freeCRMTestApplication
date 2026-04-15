@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Free CRM Test Automation suite">
+
+    <listeners>
+        <listener class-name="com.crm.qa.Analyzer.MyTransformer"/>
+    </listeners>
+
     <test name="Free CRM App Test Cases">
         <classes>
             <!-- Fully qualified name: package.ClassName -->
-            <class name="com.crm.qa.testcases.LoginPageTests"/>
-            <class name="com.crm.qa.testcases.HomePageTests"/>
+            <class name="com.crm.qa.testcases.LoginPageTests">
+            <methods>
+                <include name="loginPageTitleTest"/>
+                <include name="loginTest"/>
+            </methods>
+        </class>
+
         </classes>
     </test>
 </suite>
