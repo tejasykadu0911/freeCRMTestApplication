@@ -50,11 +50,6 @@ public class TestBase {
             driver = new FirefoxDriver();
         }
 
-        e_driver = new EventFiringWebDriver(driver);
-        eventListener = new WebEventListener();
-        e_driver.register(eventListener);
-        driver = e_driver;
-
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.PAGE_LOAD_TIMEOUT));
