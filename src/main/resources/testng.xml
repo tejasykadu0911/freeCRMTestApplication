@@ -10,3 +10,29 @@
         </classes>
     </test>
 </suite>
+
+<!--<suite name="CRM Test Suite" parallel="tests" thread-count="3">-->
+<!--    <listeners>-->
+<!--        <listener class-name="com.crm.qa.Analyzer.MyTransformer"/>-->
+<!--    </listeners>-->
+<!--        &lt;!&ndash; Thread 1 &ndash;&gt;-->
+<!--<test name="Login Tests">-->
+<!--<classes>-->
+<!--    <class name="com.crm.qa.testcases.LoginPageTests"/>-->
+<!--</classes>-->
+<!--</test>-->
+
+<!--        &lt;!&ndash; Thread 2 &ndash;&gt;-->
+<!--<test name="Home Tests">-->
+<!--<classes>-->
+<!--    <class name="com.crm.qa.testcases.HomePageTests"/>-->
+<!--</classes>-->
+<!--</test>-->
+
+<!--        &lt;!&ndash; Thread 3 &ndash;&gt;-->
+<!--<test name="Contact Tests">-->
+<!--<classes>-->
+<!--    <class name="com.crm.qa.testcases.ContactsPageTest"/>-->
+<!--</classes>-->
+<!--</test>-->
+<!--</suite>-->

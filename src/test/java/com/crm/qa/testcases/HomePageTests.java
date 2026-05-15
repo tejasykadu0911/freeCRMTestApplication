@@ -22,10 +22,15 @@ public class HomePageTests extends TestBase {
 
     @BeforeMethod
     public void setUp(){
-        initialization();
-        contactsPage = new ContactsPage();
-        loginPage = new LoginPage();
-        homePage= loginPage.login( prop.getProperty("username"),prop.getProperty("password"));
+        try {
+            initialization();
+            contactsPage = new ContactsPage();
+            loginPage = new LoginPage();
+            homePage= loginPage.login( prop.getProperty("username"),prop.getProperty("password"));
+        }catch (Exception e){
+            tearDown();
+        }
+
     }
 
     @Test(priority = 1)
